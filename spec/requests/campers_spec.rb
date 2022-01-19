@@ -30,15 +30,7 @@ RSpec.describe "Campers", type: :request do
     end
 
 
-    it 'does not return any nested activities' do
-      get '/campers'
-
-      expect(response.body).not_to include_json([
-        {
-          activities: a_kind_of(Array)
-        }
-      ])
-    end
+   
 
     it 'returns a status of 200 (OK)' do
       get '/campers'
